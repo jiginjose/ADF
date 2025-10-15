@@ -326,9 +326,7 @@
 					{
 						"activity": "ForEach1",
 						"dependencyConditions": [
-							"Skipped",
 							"Failed",
-							"Completed",
 							"Succeeded"
 						]
 					}
@@ -345,7 +343,7 @@
 					"method": "POST",
 					"url": "https://prod-11.canadacentral.logic.azure.com:443/workflows/bd66678884744b92a9c679a210b6970d/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=262mW9OUpSKnyN8BnFou5CD6sOVPCAR3RwcpplIDDUo",
 					"body": {
-						"value": "{\n    \"pipeline_name\" : @{pipeline().Pipeline},\n    \"pipeline_runId\" : @{pipeline().RunId}\n}",
+						"value": "{\n    \"pipeline_name\" : \"@{pipeline().Pipeline}\",\n    \"pipeline_runId\" : \"@{pipeline().RunId}\"\n}",
 						"type": "Expression"
 					}
 				}
